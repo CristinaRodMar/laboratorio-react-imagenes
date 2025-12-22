@@ -5,141 +5,280 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+    font-family: 'Poppins', 'Arial', sans-serif;
+    background: linear-gradient(135deg, #fff5f0 0%, #ffefea 100%);
+    color: #6b4f3a;
     line-height: 1.6;
+    min-height: 100vh;
 }
 
-/* ANIMAL CARD */
+/* LAYOUT GENERAL */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
 
-/* ANIMAL CARD */
+.app-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+}
+
+/* TIPOGRAFÍA */
+h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #a55c3a;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+h2::after {
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #ffb399;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: #a55c3a;
+    margin: 0;
+}
+
+.mb-4 {
+    margin-bottom: 2rem;
+}
+
+/* ENLACES GENERALES */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+/* ANIMAL GRID */
 .animal-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
     padding: 20px;
 }
 
 .animal-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background: white;
+    border-radius: 24px;
     overflow: hidden;
+    box-shadow: 0 10px 30px rgba(255, 182, 153, 0.15);
+    transition: all 0.4s ease;
     display: flex;
     flex-direction: column;
-    background-color: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .animal-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(255, 182, 153, 0.25);
 }
 
-.animal-image {
+.animal-card img {
     width: 100%;
-    height: 200px;
+    height: 240px;
     object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.animal-card:hover img {
+    transform: scale(1.1);
 }
 
 .animal-info {
-    padding: 16px;
+    padding: 24px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-}
-
-/* Nuevo contenedor para título + botón */
-.title-button-wrapper {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 8px;
 }
 
-.title-button-wrapper h3 {
-    margin: 0;
-    font-size: 1.15rem;
+/* BOTONES GENERALES */
+.add-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
     font-weight: 600;
-    flex: 1;
-    text-align: left;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(255, 182, 153, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background 0.2s ease; 
 }
 
 .add-button {
-    padding: 8px 16px;
-    background-color: #0d6efd; 
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-    transition: all 0.2s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #ffdab9 0%, #ffccb6 100%);
+    color: #a55c3a;
 }
 
 .add-button:hover {
-    background-color: #0b5ed7;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.add-button:focus {
-    outline: 2px solid #0d6efd;
-    outline-offset: 2px;
+    background: linear-gradient(135deg, #ffc8a3 0%, #ffbba1 100%);
 }
 
 .add-button.added {
-    background-color: #198754; 
+    background: linear-gradient(135deg, #ffecb3 0%, #ffe5a1 100%);
+    color: #b5742e;
 }
 
 .add-button.added:hover {
-    background-color: #157347;
+    background: linear-gradient(135deg, #ffe29b 0%, #ffdb89 100%);
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+.add-button.remove {
+    background: linear-gradient(135deg, #ffb399 0%, #ff9a80 100%);
+    color: #8b3a2a;
 }
 
-ul {
-    list-style: none;
+.add-button.remove:hover {
+    background: linear-gradient(135deg, #ffa582 0%, #ff8869 100%);
+}
+
+.add-button.confirm-button {
+    padding: 16px 36px;
+    font-size: 1.3rem;
+    background: linear-gradient(135deg, #ffccb6 0%, #ffdab9 100%);
+    color: #a55c3a;
+}
+
+.add-button.confirm-button:hover {
+    background: linear-gradient(135deg, #ffbba1 0%, #ffc8a3 100%);
+}
+
+/* CHECKOUT */
+.checkout-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.checkout-list .animal-card {
+    flex-direction: row;
+    height: 150px;
+    border-radius: 24px;
+    box-shadow: 0 12px 35px rgba(255, 182, 153, 0.15);
+}
+
+.checkout-list .animal-card img {
+    width: 180px;
+    height: 100%;
+    border-radius: 24px 0 0 24px;
+}
+
+.checkout-list .animal-info {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    width: 100%;
+}
+
+.checkout-list .animal-info h3 {
+    font-size: 1.5rem;
+    color: #a55c3a;
+}
+
+.checkout-summary {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 3px dashed #ffb399;
+    text-align: right;
+}
+
+.empty-cart {
+    padding: 100px 20px;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #a57c5b;
+}
+
+.empty-cart a {
+    display: inline-block;
+    margin-top: 24px;
+    color: #ff9a80;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-decoration: underline;
+}
+
+.empty-cart a:hover {
+    color: #ff7a5c;
 }
 
 /* NAVBAR */
-
 .navbar {
-    background-color: #343a40;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
+    background: linear-gradient(135deg, #fff0e6 0%, #ffe8e0 100%);
+    padding: 1.4rem 2.5rem;
+    box-shadow: 0 4px 15px rgba(255, 182, 153, 0.1);
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 2.8rem;
+    align-items: center;
 }
 
 .nav-links a {
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s;
+    color: #a55c3a;
+    font-weight: 600;
+    font-size: 1.15rem;
+    padding: 10px 18px;
+    border-radius: 30px;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
 .nav-links a:hover {
-    color: #007bff;
+    background: rgba(255, 218, 185, 0.6);
+    color: #8b452a;
+}
+
+.nav-links .material-symbols-outlined {
+    font-size: 30px;
+    color: #ff9a80;
+}
+
+.cart-link {
+    position: relative;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #ffb399;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgba(255, 179, 153, 0.4);
 }
 
 /* FOOTER */
-
 .footer {
-    background-color: #343a40;
-    padding: 1.5rem 1rem;
-    border-top: 1px solid #e9ecef;
+    background: linear-gradient(135deg, #ffdab9 0%, #ffccb6 100%);
+    padding: 2.5rem 1rem;
     margin-top: auto;
+    color: #a55c3a;
 }
 
 .footer-content {
@@ -153,42 +292,42 @@ ul {
 }
 
 .copyright {
-    margin: 0;
-    font-size: 0.9rem;
-    color: white;
+    font-size: 1rem;
+    opacity: 0.9;
 }
 
 .footer-logo .material-symbols-outlined {
-    font-size: 32px;
-    color: white;
+    font-size: 36px;
+    color: #ff9a80;
 }
 
-.app-wrapper {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.main-content {
-    flex: 1;
-}
-
-/*CAROUSEL*/
-
+/* CAROUSEL */
 #carouselExample .carousel-inner {
-    border-radius: 12px;
+    border-radius: 28px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 45px rgba(255, 182, 153, 0.15);
 }
 
 #carouselExample img {
+    height: 520px;
     object-fit: cover;
-    height: 450px; 
     width: 100%;
 }
 
 @media (max-width: 992px) {
     #carouselExample img {
-        height: 350px;
+        height: 380px;
+    }
+    
+    h2 {
+        font-size: 1.9rem;
+    }
+    
+    .navbar {
+        padding: 1.2rem 1.5rem;
+    }
+    
+    .nav-links {
+        gap: 1.8rem;
     }
 }

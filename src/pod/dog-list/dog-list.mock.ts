@@ -1,5 +1,6 @@
+import type { Animal } from "../types";
 
-export const dogsList = [
+export const dogsList: Animal[] = [
     {
         id: '1',
         picUrl: 'https://heronscrossing.vet/wp-content/uploads/Golden-Retriever.jpg',
@@ -22,6 +23,54 @@ export const dogsList = [
         id: '4',
         picUrl: 'https://www.burgesspetcare.com/wp-content/uploads/2024/09/shutterstock_2423158743.jpg',
         title: 'Dachshund (Perro Salchicha)',
+        selected: false,
+    },
+    {
+        id: '5',
+        picUrl: 'https://www.akc.org/wp-content/uploads/2017/11/Cavalier-King-Charles-Spaniel-standing-in-the-grass.jpg',
+        title: 'Cavalier King Charles Spaniel',
+        selected: false,
+    },
+    {
+        id: '6',
+        picUrl: 'https://www.akc.org/wp-content/uploads/2017/11/French-Bulldog-standing-outdoors.jpg',
+        title: 'Bulldog Francés',
+        selected: false,
+    },
+    {
+        id: '7',
+        picUrl: 'https://pet-health-content-media.chewy.com/wp-content/uploads/2024/09/11161546/202105english-bulldog-white-and-brindle.jpg',
+        title: 'Bulldog Inglés',
+        selected: false,
+    },
+    {
+        id: '8',
+        picUrl: 'https://media.istockphoto.com/id/1231537922/photo/getty.jpg?s=612x612&w=0&k=20&c=Eyr9JHZUaVCU7oHRLMAkSWB7unxrL75O1K0fWJH0TUs=',
+        title: 'Yorkshire Terrier',
+        selected: false,
+    },
+    {
+        id: '9',
+        picUrl: 'https://apupabove.com/cdn/shop/articles/Chihuahua_2ab3f5c4-9781-48ed-8119-7f780902c133.jpg?v=1742407300&width=1600',
+        title: 'Chihuahua',
+        selected: false,
+    },
+    {
+        id: '10',
+        picUrl: 'https://cdn.britannica.com/34/233234-050-1649BFA9/Pug-dog.jpg',
+        title: 'Pug (Carlino)',
+        selected: false,
+    },
+    {
+        id: '11',
+        picUrl: 'https://cdn.britannica.com/03/234203-050-C3D47B4B/Shih-tzu-dog.jpg',
+        title: 'Shih Tzu',
+        selected: false,
+    },
+    {
+        id: '12',
+        picUrl: 'https://pet-health-content-media.chewy.com/wp-content/uploads/2024/09/11161730/202104Border-Collie-1420601907-scaled-1.jpg',
+        title: 'Border Collie',
         selected: false,
     }
 ];
