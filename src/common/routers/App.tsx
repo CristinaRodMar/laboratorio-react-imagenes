@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { catsList } from "../pod/cats-lists/cat-list.mock"; 
-import { dogsList } from "../pod/dog-list/dog-list.mock"
-import { AnimalList } from "../common/components/animalList";  
-import { Navbar } from "../common/layout/nabvar";
-import { Footer } from "../common/layout/footer";
-import { Hero } from "../common/layout/hero-section";
-import { Checkout } from "../common/layout/checkout";
+import { catsList } from "../../pod/cats-lists/cat-list.mock"; 
+import { dogsList } from "../../pod/dog-list/dog-list.mock";    
+import { AnimalList } from "../components/animalList";  
+import { Navbar } from "../layout/nabvar";
+import { Footer } from "../layout/footer";
+import { Hero } from "../layout/hero-section";
+import { Checkout } from "../layout/checkout";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 

@@ -1,5 +1,5 @@
-import { useCart } from '../pod/use-card';
-import type { AnimalListProps } from '../pod/types'; 
+import { useCart } from "../../pod/use-card";
+import type { AnimalListProps } from "../../pod/types";
 
 export function AnimalList({ animals }: AnimalListProps) {
     const { cart, toggleCart } = useCart();

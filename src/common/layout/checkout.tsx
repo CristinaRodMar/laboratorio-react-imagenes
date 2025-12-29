@@ -1,4 +1,4 @@
-import { useCart } from '../pod/use-card';
+import { useCart } from '../../pod/use-card';
 import { Link } from 'react-router-dom';
 
 export const Checkout = () => {

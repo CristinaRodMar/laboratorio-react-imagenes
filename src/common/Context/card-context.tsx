@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import type { ReactNode } from 'react';
-import type { Animal } from '../pod/types';
-import { CartContext } from '../pod/card-context-helper';
+import type { Animal } from '../../pod/types';
+import { CartContext } from '../../pod/card-context-helper';
 
 export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [cart, setCart] = useState<Animal[]>([]);

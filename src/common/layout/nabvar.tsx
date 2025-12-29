@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useCart } from "../pod/use-card";
+import { useCart } from "../../pod/use-card";
 
 export const Navbar: React.FC = () => {
     const { cart } = useCart();
